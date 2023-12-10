@@ -11,7 +11,6 @@ body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    /*border: 1px solid white;*/
     font-family: 'Poppins', sans-serif;
 }
 
@@ -21,7 +20,7 @@ body {
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    /*border: 1px solid white;*/
+    /*border: 1px solid red;*/
     font-family: 'Poppins', sans-serif;
 }
   
@@ -32,12 +31,131 @@ body {
     .container {
       max-width: 320px;
     }
+
+    .industry {
+        background-color: #f2f9ff;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10%;
+        padding-bottom: 2%;
+    }
+
+    .details {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+        line-height: 1.5;
+        color: #2b2c2c;
+    }
+
+    .contact_personnel {
+        margin-right: 5px;
+        margin-left: 20%;
+        display: inline-block; 
+    }
+
+    .person_icon {
+        margin-left: 5px; 
+        background-color: #ffffff;
+        border: 5px solid #ffffff;
+        border-radius: 50%;
+        width: 35px;
+    }
+
+    .show-details .details {
+        max-height: 200px; 
+    }
+
+    .industry.show-details .toggle-btn img {
+        transform: rotate(180deg);
+    } 
+    
+    .blue_t.size_16.details.bold.m-1 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .details_contact {
+        color: #0067b9;
+    }
+
+    .main_subtext_msg {
+        padding: 5% 0 0 0;
+    }
+
+    .main_footer {
+        height: 60vh;
+    }
+
+    .main_footer_content {
+        padding-left: 25%;
+    }
+
+    .footer_call_main {
+        max-width: 55%;
+        padding: 5% 0 5% 5%;
+        text-align: center;
+        font-size: clamp(1.75rem, 1vw + 1rem, 4.5rem);
+    }
+    
+    .footer_call {
+        max-width: 70%;
+        padding: 3% 0 3% 0;
+        text-align: center;
+    }
+
+    .footer {
+        padding: 0 0 70px 0;
+    }
+
+    .connect_with_us {
+        padding: 20% 0 7% 0;
+    }
+
+    .sign_up_text {
+        padding: 10% 0 6% 0;
+    }
+
+    .get_in_touch_btn {
+        padding: 0 0 12% 15%;
+    }
+
+    .footnotes {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .buttons {
+        position: relative;
+        border: none;
+        padding: 0;
+        margin: 0;
+        background: none;
+        cursor: pointer;
+        overflow: hidden; 
+        background-color: #ffffff;
+        transition: background-color 0.4s ease; 
+    }
+
+    .container {
+        text-align: center; 
+    }
 }
   
 /* md */
 @media (min-width: 768px) {
     .container {
       max-width: 768px;
+    }
+
+    .main_text_msg {
+        text-align: left; 
+        display: flex; 
+        justify-content: space-between;
     }
 
     .main_maintext_msg {
@@ -48,24 +166,198 @@ body {
         flex: 1;
     }
 
-    .main_text_msg {
-        text-align: left; 
-        display: flex; 
-        justify-content: space-between;
-    }
-
-    .industry {
-        background-color: #f2f9ff;
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 10%;
-        padding-bottom: 2%;
-    }
-
-    .industry-container {
+    .container.industries {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between; 
+    }
+    
+    .industry {
+        width: 48%; 
+        box-sizing: border-box;
+        background-color: #f2f9ff;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2%;
+        padding-bottom: 2%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hover-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('images/blue_card.jpg');
+        color: #ffffff; 
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .industry:hover .hover-content {
+        opacity: 1;
+    }
+
+    .toggle-btn {
+        display: none;
+    }
+
+    .show-details .details {
+        max-height: 200px; 
+    }
+
+    .details {
+        max-height: 0;
+        overflow: visible;
+        transition: max-height 0.5s ease-out;
+        line-height: 1.5;
+        color: #ffffff;
+    }
+
+    .details_contact {
+        padding-top: 20%;
+        padding-left: 30%;
+        color: #ffffff;
+    }
+
+    .left {
+        text-align: left;
+        padding-bottom: 20%;
+    }
+    
+    .contact_personnel {
+        margin-right: 5px;
+        margin-left: 20%;
+        display: inline-block; 
+        width: 300px;
+    }
+
+    .main_subtext_msg {
+        padding: 0;
+        max-width: 400px;
+    }
+
+    .main_maintext_msg {
+        max-width: 650px;
+    }
+
+    .main_footer_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .footer_call_wrapper {
+        flex: 1;
+    }
+    
+    .footer_call_content {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 20%;
+        margin-top: -3%;
+    }
+
+    .main_footer {
+        height: 45vh;
+    }
+    
+    .main_footer_content {
+        padding-left: 0;
+    }
+
+    .left_side {
+        text-align: left;
+    }
+
+    .footer_call_main { 
+        width: 500px;
+        max-width: 120%;
+        padding: 5% 0 5% 5%;
+        text-align: left;
+        font-size: 2.75rem;
+    }
+    
+    .footer_call {
+        max-width: 70%;
+        padding: 3% 0 3% 0;
+        text-align: left;
+    }
+
+    .connect_with_us {
+        padding: 2% 0 0 0;
+    }
+
+    .sign_up_text {
+        padding: 0;
+    }
+
+    .get_in_touch_btn {
+        padding: 0;
+    }
+
+    .footnote {
+        background: linear-gradient(#0067b9 0 0) 0 100% /var(--d, 0) 3px no-repeat;
+        transition: 0.5s;
+    }
+
+    .footnote:hover {
+        --d: 100%;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .connect_with_us,
+    .buttons,
+    #language
+    {
+        flex: 2;
+    }
+
+    .footnotes,
+    .get_in_touch_btn,
+    .sign_up_text 
+    {
+        flex: 1;
+    }
+
+    .footnotes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4%;
+    }
+
+    .buttons {
+        border: none;
+        padding: 0;
+        margin: 0;
+        background: none;
+        cursor: pointer;
+        overflow: hidden; 
+        background-color: #ffffff;
+        transition: background-color 0.4s ease; 
+    }
+
+    .left_align {
+        text-align: left;
+    }
+
+    .right_align {
+        text-align: right;
     }
 }
   
@@ -152,7 +444,7 @@ body {
 }
 
 .main {
-    background-image: url('images/bg.jpg'); 
+    background-image: url('images/blues.jpg'); 
 }
 
 .main_msg {
@@ -168,10 +460,6 @@ body {
     text-align: left;
 }
 
-.main_subtext_msg {
-    padding: 5% 0 0 0;
-}
-
 .full_width_background {
     width: 100%;
     background-size: cover;
@@ -183,26 +471,6 @@ body {
 /* industries */
 .industries {
     padding: 10% 0 10% 0;
-}
-
-.industry {
-    background-color: #f2f9ff;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10%;
-    padding-bottom: 2%;
-}
-
-.details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-    line-height: 1.5;
-}
-
-.show-details .details {
-    max-height: 200px; 
 }
 
 .industry-header {
@@ -223,70 +491,22 @@ body {
     transition: transform 0.3s ease; 
 }
 
-.industry.show-details .toggle-btn img {
-    transform: rotate(180deg);
-}
-
-.blue_text.size_16.details.bold.m-1 {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-}
-
-.person_icon {
-    margin-left: 5px; 
-    background-color: #ffffff;
-    border: 5px solid #ffffff;
-    border-radius: 50%;
-    width: 35px;
-}
-
-.contact_personnel {
-    margin-right: 5px;
-    margin-left: 20%;
-    display: inline-block; 
-}
-
 a {
     color: inherit;
     text-decoration: none;
 }
 
 /* footer */
-.footer_call_main {
-    max-width: 55%;
-    padding: 5% 0 5% 5%;
-    text-align: center;
-}
-
-.footer_call {
-    max-width: 70%;
-    padding: 3% 0 3% 0;
-    text-align: center;
-
-}
-
 .main_footer {
-    background-image: url('images/bg.jpg');
+    background-image: url('images/blue_footer.jpg');
     display: flex; 
     align-items: center; 
     justify-content: center; 
-    height: 60vh;
-    
-}
-
-.main_footer_content {
-    padding-left: 25%;
 }
 
 .yellow_line {
     padding-right: 35%;
 }
-
-.container {
-    text-align: center; 
-}
-
 
 .phone_icon {
     padding: 0 2% 0 2%; 
@@ -303,18 +523,16 @@ a {
     background-color: #013e74;
     border: none; 
     border-radius: 45px; 
-    padding: 15px ; 
+    padding: 15px; 
     cursor: pointer; 
     transition: background-color 0.3s ease; 
 }
 
-.get_in_touch_btn {
-    padding: 0 0 12% 15%;
-}
-
 .get_in_touch p {
     color: #ffffff;
-    width: 150px;
+    width: 180px;
+    max-height: 21px;
+    font-size: 1.25rem;
 }
 
 .get_in_touch:hover {
@@ -327,12 +545,13 @@ a {
 
 #language {
     padding: 10px; 
-    font-size: 16px; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
+    font-size: 20px; 
+    border: 1px solid #fff; 
     appearance: none; 
-    background-color: #fff; 
+    background-color: #9dc1d1; 
     cursor: pointer; 
+    width: 50px;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
 }
 
 #language:hover, #language:focus {
@@ -342,29 +561,12 @@ a {
 #language option {
     padding: 10px; 
     background-color: #fff; 
-    color: #2b2c2c; 
+    color: #013e74; 
 }
 
 #language option:hover {
     background-color: #0067b9; 
     color: #fff; 
-}
-
-.footer {
-    padding: 0 0 70px 0;
-}
-
-
-.buttons {
-    position: relative;
-    border: none;
-    padding: 0;
-    margin: 0;
-    background: none;
-    cursor: pointer;
-    overflow: hidden; 
-    background-color: #ffffff;
-    transition: background-color 0.4s ease; 
 }
 
 .buttons:hover {
@@ -380,18 +582,10 @@ a {
 
 .button_twitter {
     border-radius: 50% 0% 0% 50%;
-    margin-right: -2px;
+    margin-right: -3px;
 }
 
 .button_linkedin {
     border-radius: 0% 50% 50% 0%;
-    margin-left: -2px;
-}
-
-.connect_with_us {
-    padding: 20% 0 7% 0;
-}
-
-.sign_up_text {
-    padding: 10% 0 6% 0;
+    margin-left: -3px;
 }
