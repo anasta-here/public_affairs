@@ -144,6 +144,12 @@ body {
     .container {
         text-align: center; 
     }
+
+    .underline {
+        text-decoration: underline;
+        font-size: clamp(1.25rem, 1vw + 0.5rem, 3.5rem);
+        text-align: left;
+    }
 }
   
 /* md */
@@ -221,7 +227,7 @@ body {
     }
 
     .details_contact {
-        padding-top: 20%;
+        padding-top: 40%;
         padding-left: 30%;
         color: #ffffff;
     }
@@ -359,6 +365,12 @@ body {
     .right_align {
         text-align: right;
     }
+
+    .underline {
+        text-decoration: none;
+        font-size: 38px;
+        text-align: left;
+    }
 }
   
 /* lg */
@@ -437,10 +449,6 @@ body {
 
 .black_text {
     color: #2b2c2c;
-}
-
-.underline {
-    text-decoration: underline;
 }
 
 .main {
