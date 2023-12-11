@@ -1,2 +1,3 @@
-# public_affairs
-This is a Global Public Affairs landing page, showcasing industries that public affairs are involved in and contact information
+# Global Public Affairs
+
+Welcome to the landing page for Global Public Affairs. This repository contains the source code and assets for the GPA website, showcasing the industries in which public affairs play a crucial role and providing contact information.
