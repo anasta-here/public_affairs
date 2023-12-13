@@ -8,3 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+function showDropdown() {
+    document.querySelector('.dropdown_content').style.display = 'block';
+}
+
+function hideDropdown() {
+    document.querySelector('.dropdown_content').style.display = 'none';
+}
