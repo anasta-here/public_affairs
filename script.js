@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const toggleBtns = document.querySelectorAll('.toggle-btn');
+    const toggleBtns = document.querySelectorAll('.toggle_btn');
 
     toggleBtns.forEach(btn => {
         btn.addEventListener('click', function () {
             const industry = this.closest('.industry');
-            industry.classList.toggle('show-details');
+            industry.classList.toggle('show_details');
         });
     });
 });
