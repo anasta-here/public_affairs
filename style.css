@@ -21,6 +21,7 @@ body {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
   
 /* media queries using 320px, 768px, 1200px, 1700px and 1920px width, starting with mobile design */
@@ -30,6 +31,7 @@ body {
     .container {
       max-width: 320px;
       text-align: center; 
+      box-sizing: content-box;
     }
 
     /* main content */
@@ -654,7 +656,7 @@ body {
 }
 
 .main_text_msg {
-    padding: 10%;
+    padding: 5% 0 5% 0;
     text-align: left;
 }
 
